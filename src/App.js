@@ -1,24 +1,29 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import Home from './Components/Home/Home';
+import Menu from './Components/Menu/Menu';
+import History from './Components/notre-histoire/History';
+import Contact from './Components/Contact/Contact';
+import { Route } from 'react-router-dom';
+
+import { Card, CardBody } from 'reactstrap';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+      <div className='App'>
+        <header className='App-header'>
+          <h1 className="App-logo-spin">Welcome and see an example of React Router</h1>
+          <Menu />
+          <Card>
+            <CardBody>
+              <Route exact path='/' ClassName="selected" component={Home} />
+              <Route path='/notre-histoire' ClassName="selected" component={History} />
+              <Route path='/Contact' ClassName="selected"  component={Contact} />
+              <Route component={Error} />
+            </CardBody>
+          </Card>
         </header>
       </div>
     );

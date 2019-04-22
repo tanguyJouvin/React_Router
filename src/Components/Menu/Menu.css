@@ -1,0 +1,11 @@
+.nav-link {
+  color: #fff;
+  fill: currentColor;
+  text-decoration: none;
+  margin-right: 10px;
+  font-size: calc(10px + 2vmin);
+  font-weight: bold;
+}
+.nav-link:hover {
+  color: rgb(164, 0, 0);
+}
