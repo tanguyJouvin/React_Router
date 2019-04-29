@@ -15,7 +15,7 @@ class App extends Component {
     return (
       <div className='App'>
         <header className='App-header'>
-          <h1 className="App-logo-spin">Welcome and see an example of React Router</h1>
+          <h1 className='App-title'>Welcome and see an example of React Router</h1>
           <Menu />
           <Card>
             <CardBody>

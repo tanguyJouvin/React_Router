@@ -6,13 +6,12 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  font-family: 'Karla';
   font-weight: bold;
-  color: rgb(26, 22, 22);
 }
 
-.selected:focus {
-  color: rgb(164, 0, 0);
-  text-decoration: none;
-  font-size: calc(10px + 2vmin);
+.App-title {
+  font-family: 'Karla';
+  font-weight: bold;
+  color: #289c7d;
 }
+
