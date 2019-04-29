@@ -3,7 +3,8 @@ import Home from './Components/Home/Home';
 import Menu from './Components/Menu/Menu';
 import History from './Components/notre-histoire/History';
 import Contact from './Components/Contact/Contact';
-import { Route } from 'react-router-dom';
+import Error from './Components/Error/Error';
+import { Route, Switch } from 'react-router-dom';
 
 import { Card, CardBody } from 'reactstrap';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
@@ -18,10 +19,12 @@ class App extends Component {
           <Menu />
           <Card>
             <CardBody>
-              <Route exact path='/' ClassName="selected" component={Home} />
-              <Route path='/notre-histoire' ClassName="selected" component={History} />
-              <Route path='/Contact' ClassName="selected"  component={Contact} />
-              <Route component={Error} />
+              <Switch>
+                <Route exact path='/' component={Home} />
+                <Route path='/notre-histoire' component={History} />
+                <Route path='/Contact' component={Contact} />
+                <Route component={Error} />
+              </Switch>
             </CardBody>
           </Card>
         </header>
